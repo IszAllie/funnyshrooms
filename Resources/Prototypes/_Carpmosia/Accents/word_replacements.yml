@@ -1,0 +1,14 @@
+# Accents that work off of word replacements.
+
+- type: accent
+  id: plural
+  wordReplacements:
+    accent-plural-words-1: accent-plural-words-replace-1
+    accent-plural-words-1-2: accent-plural-words-replace-1
+    accent-plural-words-2: accent-plural-words-replace-2
+    accent-plural-words-3: accent-plural-words-replace-3
+    accent-plural-words-4: accent-plural-words-replace-4
+    accent-plural-words-5: accent-plural-words-replace-5
+    accent-plural-words-6: accent-plural-words-replace-6
+    accent-plural-words-7: accent-plural-words-replace-7
+    accent-plural-words-8: accent-plural-words-replace-8

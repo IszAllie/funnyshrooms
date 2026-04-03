@@ -1,0 +1,159 @@
+- type: markingsGroup
+  parent: Undergarments
+  id: Myconid
+  limits:	
+    enum.HumanoidVisualLayers.Chest:
+      limit: 2
+      required: false
+    enum.HumanoidVisualLayers.LArm:
+      limit: 1
+      required: false
+    enum.HumanoidVisualLayers.RArm:
+      limit: 1
+      required: false
+    enum.HumanoidVisualLayers.LHand:
+      limit: 1
+      required: false
+    enum.HumanoidVisualLayers.RHand:
+      limit: 1
+      required: false
+    enum.HumanoidVisualLayers.LLeg:
+      limit: 1
+      required: false
+    enum.HumanoidVisualLayers.RLeg:
+      limit: 1
+      required: false
+    enum.HumanoidVisualLayers.LFoot:
+      limit: 1
+      required: false
+    enum.HumanoidVisualLayers.RFoot:
+      limit: 1
+      required: false
+
+- type: entity
+  parent: BaseSpeciesAppearance
+  id: AppearanceMyconid
+  name: myconid appearance
+  components:
+  - type: Inventory
+  - type: InitialBody
+    organs:
+      Torso: OrganMyconidTorso
+      Head: OrganMyconidHead
+      ArmLeft: OrganMyconidArmLeft
+      ArmRight: OrganMyconidArmRight
+      HandRight: OrganMyconidHandRight
+      HandLeft: OrganMyconidHandLeft
+      LegLeft: OrganMyconidLegLeft
+      LegRight: OrganMyconidLegRight
+      FootLeft: OrganMyconidFootLeft
+      FootRight: OrganMyconidFootRight
+      Brain: OrganMyconidBrain
+      Lungs: OrganMyconidLungs
+      Heart: OrganMyconidHeart
+      Stomach: OrganMyconidStomach	
+  - type: HumanoidProfile
+    species: Myconid
+
+- type: entity
+  parent:
+  - AppearanceMyconid
+  - BaseSpeciesMobOrganic
+  id: MobMyconid
+  name: Urist McShroom
+  components:
+  - type: Butcherable
+    spawned:
+    - id: FoodMushroom
+      amount: 5
+
+- type: entity
+  parent: OrganBase
+  id: OrganMyconid
+  abstract: true
+  suffix: Myconid
+
+- type: entity
+  id: OrganMyconidMetabolizer
+  abstract: true
+  components:
+  - type: Metabolizer
+    metabolizerTypes: [ Myconid ]
+
+- type: entity
+  parent: OrganMyconid
+  id: OrganMyconidInternal
+  abstract: true
+  components:
+  - type: Sprite
+    sprite:  _Carpmosia/Mobs/Species/Myconid/organs.rsi
+
+- type: entity
+  parent: OrganMyconid
+  id: OrganMyconidExternal
+  abstract: true
+  components:
+  - type: Sprite
+    sprite: _Carpmosia/Mobs/Species/Myconid/parts.rsi
+  - type: VisualOrgan
+    data:
+      sprite: _Carpmosia/Mobs/Species/Myconid/parts.rsi
+  - type: VisualOrganMarkings
+    markingData:
+      group: Myconid
+
+- type: entity
+  parent: [ OrganBaseTorso, OrganBaseTorso, OrganMyconidExternal ]
+  id: OrganMyconidTorso
+
+- type: entity
+  parent: [ OrganBaseHead, OrganMyconidExternal ]
+  id: OrganMyconidHead
+
+- type: entity
+  parent: [ OrganBaseArmLeft, OrganMyconidExternal ]
+  id: OrganMyconidArmLeft
+
+- type: entity
+  parent: [ OrganBaseArmRight, OrganMyconidExternal ]
+  id: OrganMyconidArmRight
+
+- type: entity
+  parent: [ OrganBaseHandLeft, OrganMyconidExternal ]
+  id: OrganMyconidHandLeft
+
+- type: entity
+  parent: [ OrganBaseHandRight, OrganMyconidExternal ]
+  id: OrganMyconidHandRight
+
+- type: entity
+  parent: [ OrganBaseLegLeft, OrganMyconidExternal ]
+  id: OrganMyconidLegLeft
+
+- type: entity
+  parent: [ OrganBaseLegRight, OrganMyconidExternal ]
+  id: OrganMyconidLegRight
+
+- type: entity
+  parent: [ OrganBaseFootLeft, OrganMyconidExternal ]
+  id: OrganMyconidFootLeft
+
+- type: entity
+  parent: [ OrganBaseFootRight, OrganMyconidExternal ]
+  id: OrganMyconidFootRight
+
+- type: entity
+  parent: [ OrganBaseBrain, OrganMyconidInternal, OrganMyconidInternal ]
+  id: OrganMyconidBrain
+
+- type: entity
+  parent: [ OrganBaseLungs, OrganMyconidInternal, OrganMyconidMetabolizer ]
+  id: OrganMyconidLungs
+
+- type: entity
+  parent: [ OrganBaseHeart, OrganMyconidInternal, OrganMyconidMetabolizer ]
+  id: OrganMyconidHeart
+
+- type: entity
+  parent: [ OrganBaseStomach, OrganMyconidInternal, OrganMyconidMetabolizer ]
+  id: OrganMyconidStomach

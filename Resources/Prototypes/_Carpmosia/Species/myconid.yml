@@ -1,0 +1,13 @@
+- type: species
+  id: Myconid
+  name: species-name-myconid
+  roundStart: true
+  prototype: MobMyconid
+  defaultSkinTone: "#878787"
+  dollPrototype: AppearanceMyconid
+  skinColoration: MyconidColors
+  maleFirstNames: NamesMyconid
+  femaleFirstNames: NamesMyconid
+  lastNames: NamesMyconidLast
+  sexes:
+  - Unsexed
