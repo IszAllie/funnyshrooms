@@ -1,9 +1,18 @@
 - type: markingsGroup
   parent: Undergarments
   id: Myconid
-  limits:	
+  onlyGroupWhitelisted: true
+  limits:
+    enum.HumanoidVisualLayers.Head:
+      limit: 2
+      required: false
+    enum.HumanoidVisualLayers.HeadTop:
+      limit: 1
     enum.HumanoidVisualLayers.Chest:
       limit: 2
+      required: false
+    enum.HumanoidVisualLayers.Snout:
+      limit: 1
       required: false
     enum.HumanoidVisualLayers.LArm:
       limit: 1
@@ -70,8 +79,11 @@
 - type: entity
   parent: OrganBase
   id: OrganMyconid
-  abstract: true
   suffix: Myconid
+  abstract: true
+  components:
+  - type: Sprite
+    sprite: _Carpmosia/Mobs/Species/Myconid/organs.rsi
 
 - type: entity
   id: OrganMyconidMetabolizer
