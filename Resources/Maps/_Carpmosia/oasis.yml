@@ -147335,7 +147335,6 @@ entities:
     - type: PoweredLight
       isBlinking: True
       lastGhostBlink: 5235.1280982
-    - type: Timer
   - uid: 18733
     components:
     - type: Transform
@@ -147345,7 +147344,6 @@ entities:
     - type: PoweredLight
       isBlinking: True
       lastGhostBlink: 5235.1280982
-    - type: Timer
   - uid: 18734
     components:
     - type: Transform
@@ -147367,7 +147365,6 @@ entities:
     - type: PoweredLight
       isBlinking: True
       lastGhostBlink: 5235.1280982
-    - type: Timer
   - uid: 18737
     components:
     - type: Transform
@@ -147790,13 +147787,11 @@ entities:
       rot: 3.141592653589793 rad
       pos: 22.5,4.5
       parent: 2
-    - type: Timer
   - uid: 18810
     components:
     - type: Transform
       pos: 22.5,9.5
       parent: 2
-    - type: Timer
   - uid: 18811
     components:
     - type: Transform
@@ -148271,7 +148266,6 @@ entities:
       rot: 3.141592653589793 rad
       pos: -29.5,39.5
       parent: 2
-    - type: Timer
   - uid: 18893
     components:
     - type: Transform
